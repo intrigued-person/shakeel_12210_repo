@@ -18,7 +18,7 @@ import com.shakeel.serviceimp.CustImp;
  
 @RestController
 @RequestMapping("/cust")
-@CrossOrigin("*")
+@CrossOrigin(origins = "http://localhost:3000")
 public class CustController {
  
     @Autowired
@@ -31,7 +31,6 @@ public class CustController {
 			service.addCustomer(stud);
 			msg = "inserted student";
 		} catch (Exception e) {
-			e.printStackTrace();
 			msg = "failed to add";
 		}
 
@@ -41,13 +40,11 @@ public class CustController {
 
 	@GetMapping("{cid}")
 	public Customer readStudent(@PathVariable("cid") int id) {
-
 		return service.getCustomer(id);
 	}
 
 	@GetMapping("/all")
 	public List<Customer> getStudents() {
-
 		return service.getAllCustomers();
 	}
 
@@ -58,7 +55,6 @@ public class CustController {
 			service.updateCustomer(stud);
 			msg = "update success";
 		} catch (Exception e) {
-			e.printStackTrace();
 			msg = "update failure";
 		}
 
@@ -73,7 +69,6 @@ public class CustController {
 			service.deleteCustomer(id);
 			msg = "deleted";
 		} catch (Exception e) {
-			e.printStackTrace();
 			msg = "not deleted";
 		}
 

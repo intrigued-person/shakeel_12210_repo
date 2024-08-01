@@ -11,7 +11,7 @@ public class ViewCustTest {
 	static WebDriver driver = new ChromeDriver();
 
 	@Test
-	public void viewCust() {
+	void viewCust() {
 		driver.get("http://localhost:3000");
 		driver.findElement(By.id("cust-view")).click();
 

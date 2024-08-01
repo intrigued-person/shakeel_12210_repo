@@ -19,7 +19,7 @@ import com.shakeel.serviceimp.ProdImp;
 
 @RestController
 @RequestMapping("/prod")
-@CrossOrigin("*")
+@CrossOrigin(origins = "http://localhost:3000")
 public class ProdController {
 	
 	@Autowired
@@ -56,7 +56,6 @@ public class ProdController {
 			service.updateProduct(bk);
 			msg = "updated";
 		} catch (Exception e) {
-			e.printStackTrace();
 			msg = "failed to update";
 		}
 
@@ -71,7 +70,6 @@ public class ProdController {
 			service.deleteProduct(bid);
 			msg = "deleted";
 		} catch (Exception e) {
-			e.printStackTrace();
 			msg = "not deleted";
 		}
 

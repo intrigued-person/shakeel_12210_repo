@@ -11,12 +11,10 @@ public class UpdateProdTest {
 	static WebDriver driver = new ChromeDriver();
 
 	@Test
-	public void updateProd() throws InterruptedException {
+	void updateProd() throws InterruptedException {
 		driver.get("http://localhost:3000/View");
 		driver.findElement(By.name("btn-upt")).click();
 		driver.findElement(By.name("pname")).sendKeys(" pro");
-		Thread.sleep(5000);
-
 		driver.findElement(By.id("sub")).submit();
 	}
 

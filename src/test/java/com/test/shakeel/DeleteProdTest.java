@@ -11,11 +11,10 @@ public class DeleteProdTest {
 	static WebDriver driver = new ChromeDriver();
 
 	@Test
-	public void deleteProd() throws InterruptedException {
+	void deleteProd() throws InterruptedException {
 		driver.get("http://localhost:3000");
 		driver.findElement(By.id("view")).click();
 		driver.findElement(By.id("del-btn")).click();
-		Thread.sleep(5000);
 
 	}
 

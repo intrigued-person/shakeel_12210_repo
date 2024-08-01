@@ -11,7 +11,7 @@ public class ViewProdTest {
 	static WebDriver driver = new ChromeDriver();
 
 	@Test
-	public void viewProd() {
+	void viewProd() {
 		driver.get("http://localhost:3000");
 		driver.findElement(By.id("view")).click();
 

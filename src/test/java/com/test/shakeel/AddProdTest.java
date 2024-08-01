@@ -11,7 +11,7 @@ public class AddProdTest {
 	static WebDriver driver = new ChromeDriver();
 
 	@Test
-	public void addProd() {
+	void addProd() {
 		driver.get("http://localhost:3000");
 		driver.findElement(By.id("reg-prod")).click();
 		driver.findElement(By.name("pname")).sendKeys("S20 FE");
